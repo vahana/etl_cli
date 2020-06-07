@@ -18,9 +18,9 @@ Typical usage example:
 
 ```
 # read from regions dataset (in standards databaes, regions collection of mongo), filter only US up to 100 items and create a target dataset in elastic search under `test.us_regions` index.
-etl.etl -s mongo/standards/regions -q country.code=US -q _limit=100 -t es/test/us_regions -o create
+etl.etl --etl_api="localhost:6544/api" -s mongo/standards/regions -q country.code=US -q _limit=100 -t es/test/us_regions -o create
 
 # read from regions dataset, match with cities dataset and save in us_cities with `city` as unique field
-etl.etl -s mongo/standards/regions -q country.code=US --mkeys=city -m mongo/other/cities -t es/test/us_cities -o create --pk=city
+etl.etl --etl_api="localhost:6544/api" -s mongo/standards/regions -q country.code=US --mkeys=city -m mongo/other/cities -t es/test/us_cities -o create --pk=city
 
 ```
