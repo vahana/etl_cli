@@ -7,7 +7,11 @@ It hides lots of verbosity and exposes common patterns and shortcuts. Can be use
 ## Setup and Usage
 ```
 git clone https://github.com/vahana/etl_cli.git
+mkvirtualenv etl_cli #or use other ways of creating virtual env
+cd etl_cli
+pip install --no-deps -r requirements.txt
 ```
+
 Upon installation, it registers `etl.etl` command line tool.
 
 Typical usage example:
