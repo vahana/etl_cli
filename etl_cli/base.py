@@ -111,8 +111,6 @@ class Base(object):
 
         self.add_argument('--etl_api', default='localhost:6544/api',
                                     help='base url of etl service')
-        self.add_argument('--std_api', default='localhost:6544/api/standards',
-                                    help='standards service api')
         self.add_argument('--drop', help='drop target first', action='store_true')
         self.add_argument('--drop-ns', help='drop target namespace', action='store_true')
         self.add_argument('--dry', help='print out params', action='store_true')
